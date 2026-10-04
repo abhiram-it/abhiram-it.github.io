@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhiram | UI/UX Designer</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Poppins:wght@300;400;500;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{background:#030712;color:#fff;font-family:Poppins,sans-serif;overflow-x:hidden}
+header{position:fixed;top:0;width:100%;z-index:99;background:#030712e8;border-bottom:1px solid #087ec533;backdrop-filter:blur(12px)}
+nav{max-width:1150px;margin:auto;height:72px;padding:0 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:800 23px Orbitron;color:#fff}.logo span{color:#00aaff}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{color:#c8d8e8;text-decoration:none;font-size:13px;transition:.3s}
+nav a:hover{color:#00aaff;text-shadow:0 0 12px #00aaff}
+.menu{display:none;font-size:25px;color:#00aaff;cursor:pointer}
+.hero{min-height:100vh;max-width:1150px;margin:auto;padding:110px 22px 60px;display:flex;align-items:center;justify-content:space-between;gap:50px;position:relative}
+.hero:before{content:"";position:absolute;width:450px;height:450px;background:#0077ff18;filter:blur(80px);border-radius:50%;left:-180px;top:100px}
+.heroText{z-index:2;max-width:650px}.mini{color:#00aaff;font:500 11px Orbitron;letter-spacing:4px;margin-bottom:18px}
+h1{font:800 clamp(45px,7vw,82px)/1 Orbitron;margin-bottom:20px}h1 span{color:#00aaff;text-shadow:0 0 25px #008cff88}
+.hero h2{font:700 20px Orbitron;letter-spacing:5px;color:#a8cdf1;margin-bottom:22px}
+.hero p{color:#91a6bd;line-height:1.8;max-width:590px}
+.buttons{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:5px;text-decoration:none;font:600 10px Orbitron;letter-spacing:1px;transition:.3s}
+.primary{background:#008cff;color:white;box-shadow:0 0 22px #008cff33}.primary:hover{transform:translateY(-3px);box-shadow:0 0 28px #008cff88}
+.secondary{border:1px solid #00aaff;color:#00aaff}.secondary:hover{background:#00aaff;color:#fff}
+.card{width:310px;padding:40px 20px;text-align:center;background:linear-gradient(145deg,#081b30,#030b16);border:1px solid #00aaff66;border-radius:20px;box-shadow:0 0 40px #006eff18}
+.avatar{width:155px;height:155px;margin:auto;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid #00aaff;color:#00aaff;font:800 45px Orbitron;box-shadow:0 0 30px #00aaff55}
+.card h3{font:700 21px Orbitron;margin-top:22px}.role{color:#00aaff;font-size:12px;margin:8px}.status{font-size:9px;color:#71879f;margin-top:20px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#00ff88;box-shadow:0 0 9px #00ff88;margin-right:5px}
+section{max-width:1150px;margin:auto;padding:90px 22px}.dark{max-width:none;background:#040a14}
+.title{text-align:center;margin-bottom:48px}.title p{color:#00aaff;font:500 10px Orbitron;letter-spacing:4px;margin-bottom:10px}.title h2{font:700 32px Orbitron}.title span{color:#00aaff}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.box{background:#07111f;border:1px solid #14304a;border-radius:10px;padding:30px;transition:.3s}.box:hover{transform:translateY(-7px);border-color:#00aaff;box-shadow:0 12px 30px #008cff18}
+.icon{font-size:30px;margin-bottom:16px}.box h3{font:600 16px Orbitron;margin-bottom:12px}.box p{font-size:13px;line-height:1.7;color:#8398ae}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.skill{background:#07111f;border:1px solid #14304a;border-radius:10px;padding:26px}.skill .big{font-size:28px}.skill h3{font:600 14px Orbitron;margin:15px 0 8px}.skill p{font-size:12px;color:#8398ae;line-height:1.6}.bar{height:5px;background:#152438;border-radius:8px;margin-top:18px;overflow:hidden}.bar i{display:block;height:100%;background:#00aaff;box-shadow:0 0 10px #00aaff}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.project{background:#07111f;border:1px solid #14304a;border-radius:10px;overflow:hidden;transition:.3s}.project:hover{transform:translateY(-7px);border-color:#00aaff}.visual{height:170px;background:linear-gradient(135deg,#061a30,#020810);display:flex;align-items:center;justify-content:center;color:#00aaff;font:700 23px Orbitron;letter-spacing:4px;border-bottom:1px solid #14304a}.project article{padding:23px}.project h3{font:600 15px Orbitron;margin-bottom:10px}.project p{font-size:12px;color:#8398ae;line-height:1.7}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.tags span{font-size:9px;color:#00aaff;border:1px solid #075b8c;padding:4px 8px;border-radius:3px}
+.edu{max-width:800px;margin:auto;background:#07111f;border-left:3px solid #00aaff;padding:30px;display:flex;gap:25px}.eduIcon{font-size:40px}.year{font:10px Orbitron;color:#00aaff}.edu h3{font:600 17px Orbitron;margin:9px 0}.edu h4{color:#a8cfee;font-size:14px;margin-bottom:10px}.edu p{font-size:12px;color:#8398ae;line-height:1.7}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact h3{font:600 23px Orbitron;margin-bottom:15px}.contact>div>p{font-size:13px;color:#8398ae;line-height:1.7;margin-bottom:25px}.item{display:flex;gap:13px;margin:18px 0}.item b{font-size:20px}.item small{color:#00aaff}.item p{font-size:12px;color:#b8c9d9}
+form{display:flex;flex-direction:column;gap:13px}input,textarea{background:#07111f;border:1px solid #14304a;color:#fff;padding:14px;border-radius:5px;outline:none;font-family:Poppins}input:focus,textarea:focus{border-color:#00aaff}textarea{resize:vertical}
+footer{text-align:center;background:#02060d;border-top:1px solid #14304a;padding:32px 20px;color:#657a90;font-size:11px}.footlogo{font:800 21px Orbitron;color:#fff;margin-bottom:10px}.footlogo span{color:#00aaff}.social{margin-top:15px}.social a{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border:1px solid #14304a;color:#00aaff;text-decoration:none;margin:3px;border-radius:4px}
+@media(max-width:850px){nav ul{display:none;position:absolute;top:72px;left:0;width:100%;background:#030712;flex-direction:column;text-align:center;padding:25px}.menu{display:block}.hero{flex-direction:column;text-align:center}.hero p{margin:auto}.buttons{justify-content:center}.grid3,.projects{grid-template-columns:1fr 1fr}.skills{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}}
+@media(max-width:560px){.hero{padding-top:105px}.hero h1{font-size:43px}.card{width:100%}.grid3,.projects,.skills{grid-template-columns:1fr}section{padding:70px 18px}.title h2{font-size:26px}.edu{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<header><nav>
+<div class="logo">ABH<span>IRAM</span></div>
+<ul id="nav">
+<li><a href="#home">HOME</a></li><li><a href="#about">ABOUT</a></li><li><a href="#skills">SKILLS</a></li><li><a href="#projects">PROJECTS</a></li><li><a href="#education">EDUCATION</a></li><li><a href="#contact">CONTACT</a></li>
+</ul>
+<div class="menu" onclick="document.getElementById('nav').style.display=document.getElementById('nav').style.display==='flex'?'none':'flex'">☰</div>
+</nav></header>
+
+<main>
+<section class="hero" id="home">
+<div class="heroText">
+<div class="mini">WELCOME TO MY PORTFOLIO</div>
+<h1>HI, I'M <span>ABHIRAM</span></h1>
+<h2>UI/UX DESIGNER</h2>
+<p>B.Tech Information Technology student passionate about creating modern, attractive and user-friendly digital experiences.</p>
+<div class="buttons"><a class="btn primary" href="#projects">VIEW PROJECTS</a><a class="btn secondary" href="#contact">CONTACT ME</a></div>
+</div>
+<div class="card"><div class="avatar">AB</div><h3>ABHIRAM</h3><div class="role">UI/UX DESIGNER</div><div class="status"><span class="dot"></span> AVAILABLE FOR CREATIVE PROJECTS</div></div>
+</section>
+
+<section id="about">
+<div class="title"><p>WHO AM I?</p><h2>ABOUT <span>ME</span></h2></div>
+<div class="grid3">
+<div class="box"><div class="icon">⚡</div><h3>CREATIVE DESIGNER</h3><p>I am Abhiram, a B.Tech Information Technology student from DMI Engineering College, interested in UI/UX design and modern digital interfaces.</p></div>
+<div class="box"><div class="icon">🎯</div><h3>MY GOAL</h3><p>To combine creativity and technology to design simple, modern and enjoyable user experiences.</p></div>
+<div class="box"><div class="icon">🚀</div><h3>MY VISION</h3><p>To continuously improve my design skills and create better digital products and experiences.</p></div>
+</div>
+</section>
+
+<div class="dark"><section id="skills">
+<div class="title"><p>MY EXPERTISE</p><h2>MY <span>SKILLS</span></h2></div>
+<div class="skills">
+<div class="skill"><div class="big">🎨</div><h3>UI DESIGN</h3><p>Clean, modern and attractive interfaces.</p><div class="bar"><i style="width:90%"></i></div></div>
+<div class="skill"><div class="big">🧠</div><h3>UX DESIGN</h3><p>Simple and user-friendly experiences.</p><div class="bar"><i style="width:85%"></i></div></div>
+<div class="skill"><div class="big">📱</div><h3>MOBILE DESIGN</h3><p>Responsive mobile interface concepts.</p><div class="bar"><i style="width:80%"></i></div></div>
+<div class="skill"><div class="big">💻</div><h3>WEB DESIGN</h3><p>Attractive and responsive website layouts.</p><div class="bar"><i style="width:85%"></i></div></div>
+</div>
+</section></div>
+
+<section id="projects">
+<div class="title"><p>MY WORK</p><h2>FEATURED <span>PROJECTS</span></h2></div>
+<div class="projects">
+<div class="project"><div class="visual">UI/UX</div><article><h3>MODERN MOBILE APP</h3><p>A modern mobile application interface focused on simple navigation and smooth user experience.</p><div class="tags"><span>UI</span><span>UX</span><span>MOBILE</span></div></article></div>
+<div class="project"><div class="visual">GAMING</div><article><h3>GAMING WEBSITE</h3><p>A futuristic gaming website concept with a dark theme and responsive interface.</p><div class="tags"><span>WEB</span><span>UI</span><span>GAMING</span></div></article></div>
+<div class="project"><div class="visual">DASHBOARD</div><article><h3>DASHBOARD UI</h3><p>A clean dashboard interface designed to display information clearly and efficiently.</p><div class="tags"><span>DASHBOARD</span><span>UX</span><span>UI</span></div></article></div>
+</div>
+</section>
+
+<div class="dark"><section id="education">
+<div class="title"><p>MY JOURNEY</p><h2>EDU<span>CATION</span></h2></div>
+<div class="edu"><div class="eduIcon">🎓</div><div><div class="year">CURRENT</div><h3>B.TECH INFORMATION TECHNOLOGY</h3><h4>DMI ENGINEERING COLLEGE</h4><p>Currently pursuing B.Tech in Information Technology while developing technical knowledge and creative design skills.</p></div></div>
+</section></div>
+
+<section id="contact">
+<div class="title"><p>LET'S CONNECT</p><h2>CONTACT <span>ME</span></h2></div>
+<div class="contact">
+<div><h3>LET'S CREATE SOMETHING AMAZING.</h3><p>Have a project idea or want to connect? Feel free to reach out.</p>
+<div class="item"><b>📧</b><div><small>EMAIL</small><p>YourEmail@example.com</p></div></div>
+<div class="item"><b>💼</b><div><small>LINKEDIN</small><p>linkedin.com/in/yourprofile</p></div></div>
+<div class="item"><b>💻</b><div><small>GITHUB</small><p>github.com/yourusername</p></div></div>
+</div>
+<form onsubmit="event.preventDefault();alert('Thank you! Your message has been received.');this.reset()">
+<input required placeholder="Your Name"><input required type="email" placeholder="Your Email"><input required placeholder="Subject"><textarea required rows="6" placeholder="Your Message"></textarea><button class="btn primary" type="submit">SEND MESSAGE ⚡</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer><div class="footlogo">ABH<span>IRAM</span></div><div>© 2026 Abhiram. Designed with creativity & passion.</div><div class="social"><a href="#">GH</a><a href="#">LI</a><a href="#">IG</a></div></footer>
+</body>
+</html>
